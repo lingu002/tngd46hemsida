@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  background-color: #242333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(bilder/textured-background-beige-hogre.png);
+}
+
+/* ÖVERGRIPANDE STYLING */
+  h1 {
+      font-family: "futura-pt-condensed", sans-serif;
+      font-size: 4.5em;
+      color: #d8871c;
+      filter: drop-shadow(2px 2px 2px #fcf6c1);
+    }
+    
+  h2 {
+      font-family: "futura-pt-condensed", sans-serif;
+      font-style: normal;
+      font-size: 1.5em;
+      color: #d8871c;
+      text-align: center;
+  }
+
+/* STYLING FÖR NAVIGATIONSMENY */
+  .navigation {
+    grid-area: meny;
+    display: grid;
+    align-items: center;
+    z-index: 2;
+    }
+
+  nav { 
+    font-family: "futura-pt-condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: -50px;
+    font-size: 3vw;
+    position: fixed;
+    top: 40%;
+    left: 0%;
+  }
+
+  nav li {
+    list-style: none;
+    text-align: left;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 2px #fcf6c1);
+
+  }
+
+  a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #d8871c;
+  }
+
+  .navheader {
+      color: #d8871c;
+      text-decoration: none;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+/* ANNAN STYLING */
+
+  .movie-container {
+      margin: 20px 0;
+    }
+    
+  .movie-container select {
+      background-color: transparent;
+      border: 3px solid black;
+      color: #d8871c;
+      border-radius: 5px;
+      font-size: 14px;
+      padding: 5px 15px 5px 15px;
+      appearance: none;
+      font-family: "futura-pt-condensed", sans-serif;
+      text-align: center;
+      font-weight: bolder;
+    }
+    
+  .container {
+      perspective: 1000px;
+      margin-bottom: 30px;
+    }
+    
+  .seat {
+      background-color: #444451;
+      height: 20px;
+      width: 25px;
+      margin: 3px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border: 1px solid black;
+    }
+    
+  .seat.selected {
+      background-color:#d8871c;
+    }
+    
+  .seat.occupied {
+      background-color: tomato;
+    }
+    
+  .seat:nth-of-type(2) {
+      margin-right: 18px;
+    }
+    
+  .seat:nth-last-of-type(2) {
+      margin-left: 18px;
+    }
+    
+  .showcase {
+      border: 3px solid black;
+      padding: 5px 10px;
+      border-radius: 10px;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+  .showcase li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+    }
+    
+  .row {
+      display: flex;
+    }
+
+  .text {
+    text-align: center;
+  }
+    
+  .screen {
+      background-color: #242333;
+      height: 70px;
+      width: 100%;
+      margin: 15px 0;
+      transform: rotateX(-45deg);
+      box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/atc3nqq.css">
+    <title>Boka biljetter</title>
+  </head>
+  
+  <body>
+
+    <nav class="navigation"> 
+      <UL>
+      <li><a href="index.html#start"> START </a></li>
+      <li><a href="index.html#trailertitel"> SE TRAILER </a></li>
+      <li><a href="index.html#bokafilmen"> BOKA BIO </a></li>
+      <li><a href="index.html#omfilmen"> OM FILMEN </a></li>
+      <li><a href="index.html#utstallning"> UTSTÄLLNING </a></li>
+      </UL>
+  </nav> 
+	
+	<h1>BOKA BIO</h1>
+	
+	<div class="movie-container">
+      <div class="vilkendag"> <h2 class="vilketdatum">VÄLJ DATUM</h2> </div>
+      <select id="movie">
+        <option>Måndag 4/3-2023</option>
+        <option>Onsdag 6/3-2023</option>
+        <option>Fredag 8/3-2023</option>
+        <option>Söndag 10/3-2023</option>
+      </select>
+    </div>
+
+    <ul class="showcase">
+      <li>
+        <div class="seat"></div>
+        <h2>Tillgänglig plats</h2>
+      </li>
+
+      <li>
+        <div class="seat selected"></div>
+        <h2>Vald plats</h2>
+      </li>
+
+      <li>
+        <div class="seat occupied"></div>
+        <h2>Upptagen plats</h2>
+      </li>
+    </ul>
+
+    <div class="container">
+      <div class="screen"> <h2 class="text"> Du har valt <span id="count">0</span> platser </h2> </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

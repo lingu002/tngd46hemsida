@@ -1,0 +1,738 @@
+@charset "UTF-8";
+
+/* CSS FÖR DATOR */
+@media (min-width: 768px) {
+    body {
+        min-height: 100vh;
+        min-width: 100vw;
+        margin:0;
+        background-image: url(bilder/textured-background-beige-hogre.png);
+        background-size: cover; /* Anpassa bilden för att täcka hela bakgrunden */
+        background-repeat: repeat-y;
+    }
+
+        /* ÖVERGRIPANDE STYLING */
+            h1 {
+                color: #fcf6c1;
+                font-size: 77pt;
+                font-family: "Futura", 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+                margin-top: 0;
+                padding-top: 200px;
+            }
+
+            h2 {
+                font-family: "futura-pt-condensed", sans-serif;
+                font-style: normal;
+                font-size: 5vw;
+                color: #d8871c;
+            }
+
+            p {
+                font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+                font-weight: 600;
+                text-align: left;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+        /* ÖVERGRIPANDE CONTAINER */
+            .layout {
+                min-height: 100vh;
+                min-width: 100vw;
+                z-index: 2;
+                background-image: url(bilder/slaget.png); 
+                background-repeat: no-repeat;
+                background-size: 100%;
+                display: grid;
+                grid-template-columns: 10% auto 15%;
+                grid-template-areas: 
+                'meny startsida side'
+                'meny trailer side'
+                'meny boka side'
+                'meny omfilmen side'
+                'meny utstallning side' 
+                'footer footer side'
+            }
+
+        /* STYLING FÖR NAVIGATIONSMENY */
+        .navigation {
+            grid-area: meny;
+            display: grid;
+            align-items: center;
+            z-index: 2;
+            }
+        
+          nav { 
+            font-family: "futura-pt-condensed", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-top: -50px;
+            font-size: 3vw;
+            position: fixed;
+            top: 40%;
+          }
+        
+          nav li {
+            list-style: none;
+            text-align: left;
+          }
+        
+          a {
+            color: black;
+            text-decoration: none;
+          }
+        
+         nav a {
+            color: black;
+            text-decoration: none;
+            filter: drop-shadow(2px 2px 2px #fcf6c1);
+          }
+
+          a:hover {
+            text-decoration: none;
+            font-weight: bold;
+            color: #d8871c;
+          }
+        
+          .navheader {
+              color: #d8871c;
+              text-decoration: none;
+          }
+        
+          a {
+              text-decoration: none;
+          }
+
+        /* STYLING FÖR SIDEBAR */
+            .layoutside {
+                grid-area: side;
+                padding: 5%;
+                background-image: url(bilder/textured-background-orange-cut.png);
+                background-size: 100%;
+                z-index: 2;
+            }
+
+            .layoutside h2 {
+                color:#fcf6c1;
+                font-family: "futura-pt-condensed", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                margin-top: -3.5vw;
+                font-size: 4vw;
+            }
+
+            .layoutside h3 {
+                color:#fcf6c1;
+                font-size: 2.3vw;
+                font-family: "futura-pt-condensed", sans-serif;
+                font-weight: 400;
+                font-style: normal;    
+                margin-top: 0px;
+            }
+
+            .layoutside h4 {
+                color:#fcf6c1;
+                font-size: 3vw;
+                font-family: "futura-pt-condensed", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 0;
+                text-decoration-line: underline;
+            }
+
+            .layoutside p {
+                color:#fcf6c1;
+                font-size: 1vw;
+                font-family: "futura-pt-condensed", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            #datum {
+                font-family: "futura-pt-condensed", sans-serif;
+                font-weight: 700;
+                font-size: 5.7vw;
+                font-style: normal;
+                line-height: 4.5vw;
+                padding-top: -45px;
+            }
+
+            #bio {
+                font-family: "futura-pt-condensed", sans-serif;
+                font-style: normal;
+                font-size: 5vw;
+                padding-bottom: -55px;
+            }
+
+
+        /* STYLING FÖR INDEX */
+            .indexlayout {
+                grid-area: startsida;
+                padding-left: 10%;
+                padding-right: 10%;
+                text-align: center;  
+            }
+
+        /* STIL FÖR PILEN */
+            .scroll-down-pil {
+                width: 3vw;
+                height: 3vw;
+                transform: translateX(-50%);
+                cursor: pointer;
+                margin: auto;
+                position: relative;
+                left: 2%;
+                filter: drop-shadow(2px 2px 2px #fcf6c1);
+            }
+
+            .click-overlay {
+                position: relative;
+                left: 2%;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                background-color: transparent; /* Gör överlägget osynligt */
+                cursor: pointer;
+                pointer-events: none; /* Detta gör överlägget icke-interaktivt */
+                filter: drop-shadow(2px 2px 2px #fcf6c1);
+            }
+
+            .scroll-down-pil2 {
+                width: 3vw;
+                height: 3vw;
+                transform: translateX(-50%);
+                cursor: pointer;
+                margin: auto;
+                position: relative;
+                left: 2%;
+                padding-top: -50px;
+                padding-bottom: 150px;
+                filter: drop-shadow(2px 2px 2px #fcf6c1);
+            }
+
+            .click-overlay2 {
+                position: relative;
+                padding-top: -50px;
+                padding-bottom: 150px;
+                left: 2%;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                background-color: transparent; /* Gör överlägget osynligt */
+                cursor: pointer;
+                pointer-events: none; /* Detta gör överlägget icke-interaktivt */
+                filter: drop-shadow(2px 2px 2px #fcf6c1);
+            }
+
+            
+
+        /* STYLING FÖR START */
+            .container.start {
+                grid-area: startsida;
+                place-items: center;
+                z-index: 2;
+            }
+
+            #start {
+                filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.4));
+                padding-top: 18vh;
+                padding-bottom: 20vh;
+                z-index: 3; 
+            }
+            
+        /* STYLING FÖR TRAILER */
+            .container.trailer {
+                grid-area: trailer;
+            }
+
+            #setrailer {
+                padding-top: 10px;
+            }
+
+            iframe {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                border: none;
+                padding-bottom: 30px;
+            }
+
+            #trailertitel {
+                padding-top: 80px;
+                filter: drop-shadow(2px 2px 2px #fcf6c1);
+            }
+
+        /* STYLING FÖR BOKA FILMEN */
+        .bokafilm {
+            grid-area: boka;
+            background: url(bilder/bakgrund-bokabio.png);
+            background-size: contain;
+            background-repeat: repeat-x;
+            margin-left: -30%;
+            min-width: 143%;
+            z-index: 4;
+        }
+        
+        #bokafilmen {
+                filter: drop-shadow(2px 2px 2px #000000);
+                padding-top: 200px;
+                padding-bottom: 180px;
+                padding-left: 8%;
+                color: #fcf6c1;
+            }
+            
+        /* STYLING FÖR OM FILMEN */
+        .container.omfilmen {
+            grid-area: omfilmen;
+            max-width: 1200px;
+        }
+
+        #omfilmen {
+            padding-top: 185px;
+            filter: drop-shadow(2px 2px 2px #fcf6c1);
+        }
+
+        .omfilmen2 { /* brödtexten */
+            padding-bottom: 40px;
+            font-family: "futura-pt-condensed", sans-serif;
+            font-style: normal;
+            font-size: 1.7vw;
+            font-weight: normal;
+            text-align: justify;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .omfilmen3 {   /* bilden */
+            float: right;
+            width: 33%;
+            padding-top: 10px;
+            padding-left: 25px;
+            padding-bottom: -30px;
+            
+        }
+
+        /* STYLING FÖR UTSTÄLLNINGEN */
+        .container.utstallning{
+                grid-area: utstallning;
+            }
+
+        #utstallning {
+            padding-top: 50px;
+            filter: drop-shadow(2px 2px 2px #fcf6c1);
+        }
+
+        .utstallning2 {
+            font-family: "futura-pt-condensed", sans-serif;
+            font-style: normal;
+            font-size: 1.7vw;
+            padding-bottom: 30px;
+            font-weight: normal;
+            text-align: justify;
+            justify-self: center;
+            max-width: 1200px;
+            margin: auto;
+
+        }
+
+        .image {
+
+            padding-bottom: 100px;
+            width: 32%;
+            max-width: 400px;
+        }
+
+        .image2 {
+            width: 32%;
+            max-width: 400px;
+            padding-bottom: 0px;
+        }
+
+        /* STYLING FÖR FOOTER */
+        .footerlayout {
+            grid-area: footer;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+            'kontakt adress some';
+            text-align: center;
+            color: #fcf6c1;
+            background-image: url(bilder/textured-background-footer.png);
+            height: 30vh;
+            }
+
+        .socialmedia {
+            width: 10%;
+        }
+        
+        .kontakt {
+            grid-area: kontakt;
+            padding-left: 40px;
+        }
+
+        .adress {
+            grid-area: adress;
+        }
+
+        .some {
+            grid-area: some;
+        }
+
+        .footerh {
+            text-align: left;
+            font-family: "futura-pt-condensed", sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 2.2vw;
+        }
+
+        .footerp {
+            font-family: "futura-pt-condensed", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.6vw;
+            line-height: 0.8vw;
+        }
+    }
+
+
+/* CSS FÖR MOBIL */
+@media (max-width: 767px){
+
+    body {
+        min-height: 100vh;
+        min-width: 100vw;
+        margin:0;
+        background-image: url(bilder/textured-background-beige-hogre.png);
+        background-repeat: repeat-y;
+    }
+
+     /* ÖVERGRIPANDE STYLING */
+     h1 {
+        color: #fcf6c1;
+        font-size: 77pt;
+        font-family: "Futura", 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+        margin-top: 0;
+        padding-top: 200px;
+    }
+
+    h2 {
+        font-family: "futura-pt-condensed", sans-serif;
+        font-style: normal;
+        font-size: 8vw;
+        color: #d8871c;
+        filter: drop-shadow(2px 2px 2px #fcf6c1);
+    }
+
+    p {
+        font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+        font-weight: 600;
+        text-align: left;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+/* ÖVERGRIPANDE CONTAINER */
+    .layout {
+        min-height: 100vh;
+        min-width: 100vw;
+        background-image: url(bilder/slaget.png); 
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: grid;
+        grid-template-columns: auto 25%;
+        grid-template-areas: 
+        'startsida side'
+        'trailer side'
+        'bokabio side'
+        'omfilmen side'
+        'utstallning side'
+        'footer side';    
+    }
+
+
+/* STYLING FÖR NAVIGATIONSMENY */
+
+     /* STYLING FÖR NAVIGATIONSMENY */
+     .navigation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    nav { 
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 5vw;
+        padding: 10px;
+    }
+
+    nav li {
+        list-style: none;
+    }
+
+    a {
+        color: #fcf6c1;
+        text-decoration: none;
+    }
+    a:after {
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+  /* Stil för pilen */
+  .scroll-down-pil {
+    display: none;
+}
+
+.scroll-down-pil2 {
+    display: none;
+}
+
+/* Det osynliga överlägget */
+.click-overlay {
+   display: none;
+}
+
+
+/* STYLING FÖR SIDEBAR */
+
+    .layoutside {
+        grid-area: side;
+        padding: 5%;
+        background-image: url(bilder/textured-background-orange-cut.png);
+        background-size: 100%;
+        min-width: 30px;
+        z-index: 2;
+    }
+
+    .layoutside h2 {
+        color:#fcf6c1;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-top: -50px;
+        display: none;
+    }
+
+    .layoutside h3 {
+        color:#fcf6c1;
+        font-size: 1.5em;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;    
+        margin-bottom: 40px;
+        display: none;
+    }
+
+    .layoutside h4 {
+        color:#fcf6c1;
+        font-size: 1.5em;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-top: 40px;
+        margin-bottom: -20px;
+        text-decoration-line: underline;
+        display: none;
+    }
+
+    .layoutside p {
+        color:#fcf6c1;
+        font-size: 50%;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        display: none;
+    }
+
+    #datum {
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 700;
+        font-size: 3em;
+        font-style: normal;
+        line-height: 1em;
+        padding-top: -45px;
+        display: none;
+    }
+
+    #bio {
+        font-family: "futura-pt-condensed", sans-serif;
+        font-style: normal;
+        font-size: 3em;
+        display: none;
+    
+    }
+
+
+/* STYLING FÖR INDEX */
+    .indexlayout {
+        grid-area: startsida;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 10%;
+        text-align: center;    
+    }
+
+
+/* STYLING FÖR START */
+    .container.start {
+        grid-area: startsida;
+        place-items: center;
+    }
+
+    #start {
+        filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.4));
+        padding-top: 50px;
+        padding-bottom: 100px;
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    #slagetstart{
+        grid-area: startsida;  
+        z-index: auto;
+        width: 125%;          
+    }
+    
+/* STYLING FÖR TRAILER */
+    .container.trailer {
+        grid-area: trailer;
+    }
+
+    #setrailer {
+        padding-bottom:0px;
+        margin:auto;
+    }
+
+    iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: none;
+    }
+
+/* STYLING FÖR BOKA FILM */
+    .bokafilm {
+        grid-area: boka;
+        background: url(bilder/bakgrund-bokabio.png);
+        background-size: contain;
+        background-repeat: repeat-x;
+        margin-left: -30%;
+        min-width: 143%;
+        z-index: 4;
+    }
+    
+    #bokafilmen {
+            filter: drop-shadow(2px 2px 2px #000000);
+            padding-top: 50px;
+            padding-bottom: 30px;
+            padding-left: 15%;
+            color: #fcf6c1;
+        }
+
+
+/* STYLING FÖR OM FILMEN */
+.container.omfilmen {
+    grid-area: omfilmen;
+}
+
+.omfilmen2 {
+    font-family: "futura-pt-condensed", sans-serif;
+    font-style: normal;
+    font-size: 3vw;
+    font-weight: normal;
+    text-align: justify;
+}
+
+.omfilmen3 {
+    float: right;
+    width: 33%;
+    padding-left: 5%;
+    padding-bottom: 0%
+    
+}
+
+
+/* STYLING FÖR UTSTÄLLNINGEN */
+.container.utstallning {
+        grid-area: utstallning;
+    }
+
+#utstallning {
+    padding-top: 50px;
+}
+
+.utstallning2 {
+    padding-bottom: 10px;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-style: normal;
+    font-size: 3vw;
+    font-weight: normal;
+
+}
+
+.image {
+    padding-bottom: 50px;
+    width: 32%;
+}
+
+.image2 {
+    width: 32%;
+}
+
+  /* STYLING FÖR FOOTER */
+  .footerlayout {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'kontakt adress some';
+    text-align: center;
+    color: #fcf6c1;
+    background-image: url(bilder/textured-background-footer.png);
+    height: 20vh;
+    }
+
+.socialmedia {
+    width: 10%;
+}
+
+.kontakt {
+    grid-area: kontakt;
+    padding-left: 40px;
+}
+
+.adress {
+    grid-area: adress;
+}
+
+.some {
+    grid-area: some;
+}
+
+.footerh {
+    text-align: left;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.footerp {
+    font-family: "futura-pt-condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8vw;
+    line-height: 1.6vw;
+}
+
+}
